@@ -6,18 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/css/main.css">
 </head>
 
 <body>
-    <fieldset>
-        <h1> Bem-vindo, <%= nome %>
-        </h1>
-        <form action="/files" method="POST">
-            <label for="arquivo">Imagem de perfil:</label>
-            <input type="file" name="arquivo" multiple>
-            <input type="submit" value="Submit">
-        </form>
-    </fieldset>
+    <h1>Hello World , <%=nome%></h1>
 </body>
-
 </html>

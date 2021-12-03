@@ -1,9 +1,6 @@
-const express = require('express');
 const mysql = require('../config/config');
 
-const router = express.Router();
-
-router.get('/', (req, res) => {
+exports.indexPage = (req, res) => {
     mysql.getConnection((error, conn) => {
 
         const sql = `SELECT * FROM usuarios;`
@@ -16,15 +13,4 @@ router.get('/', (req, res) => {
 
         })
     })
-})
-// UPLOAD multiplos arquivos
-router.post('/files', (req, res) => {
-
-    let arquivos = req.body.arquivo
-
-    console.log(req.body.arquivo);
-
-    res.redirect('/')
-})
-
-module.exports = router;
+}
